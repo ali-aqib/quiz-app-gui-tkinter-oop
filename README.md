@@ -9,7 +9,7 @@
 # Usage Guide
 - Upon running the main.py ,API fetches 15 computer science questions.
 
-- ![Screenshot1](./images/Screenshot1.png)
+![Screenshot1](./images/Screenshot1.png)
 
 - User have to answer "Ture" or "False" by clicking ✅ or ❌ button.
 
