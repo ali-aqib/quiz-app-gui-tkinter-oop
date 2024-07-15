@@ -15,11 +15,11 @@
 
 ![Screenshot2](./images/Screenshot2.png)
 
-- If the user's answer is correct then the canvas screen turns green.
+- If the user's answer is correct then the canvas screen turns green for 1 second.
 
 ![Screenshot3](./images/Screenshot3.png)
 
-- If user's answer is wrong then the canvas screen turns red.
+- If user's answer is wrong then the canvas screen turns red for 1 second.
 
 - In the end final score is displayed.
 
