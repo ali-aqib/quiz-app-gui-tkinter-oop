@@ -1,6 +1,6 @@
 from tkinter import *
 from quiz_brain import QuizBrain
-
+import os
 THEME_COLOR = "#375362"
 
 
@@ -23,9 +23,12 @@ class QuizInterface:
 
         self.score_label = Label(self.window, text=f"Score: 0", bg=THEME_COLOR, fg="white", font=("Ariel", 20))
         self.score_label.grid(row=0, column=1)
+        script_dir = os.path.dirname(__file__)
+        image_true = PhotoImage(file=os.path.join(script_dir, 'images', 'true.png'))
+        image_false = PhotoImage(file=os.path.join(script_dir, 'images', 'false.png'))
 
-        image_true = PhotoImage(file="C:/Users/infoa/PycharmProjects/day-33 quizzler-app-start/images/true.png")
-        image_false = PhotoImage(file="C:/Users/infoa/PycharmProjects/day-33 quizzler-app-start/images/false.png")
+        # image_true = PhotoImage(file="images/true.png")
+        # image_false = PhotoImage(file="images/false.png")
         self.button_true = Button(self.window, image=image_true, bg=THEME_COLOR,
                                   fg=THEME_COLOR, highlightthickness=0, relief="flat", command=self.true_pressed)
         self.button_true.grid(row=2, column=0, padx=10, pady=10)
@@ -37,9 +40,9 @@ class QuizInterface:
         self.window.mainloop()
 
     def get_next_question(self):
+        self.score_label.config(text=f"Score: {self.quiz.score}")
         self.canvas.config(bg="white")
         if self.quiz.still_has_questions():
-            self.score_label.config(text=f"Score: {self.quiz.score}")
             q_text = self.quiz.next_question()
             self.canvas.itemconfig(self.question_text, text=q_text)
         else:
