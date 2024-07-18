@@ -1,0 +1,12 @@
+# Ignore all files and directories that start with a dot
+.*
+
+# Do not ignore the .gitignore file itself
+!.gitignore
+
+# Additional ignores
+node_modules/
+*.log
+.DS_Store
+*.pyc
+__pycache__/
